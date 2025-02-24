@@ -11,7 +11,7 @@ Introduction [INTRO](URL_TASKS) :
 
 Intro...
 
-![IMG](URL_IMG)
+![IMG](./assets/HEAD.png)
 
 Example code:
 
