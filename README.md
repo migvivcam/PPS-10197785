@@ -4,7 +4,7 @@
 
 ## RA3 - Detección de vulnerabilidades web
 
-###Indice:
+### Indice:
 * [RA3_1](###RA3_1):
 * [RA3_2](#TODO):
 * [RA3_3](#TODO):
@@ -12,7 +12,7 @@
 
 ### RA3_1
 En la práctia 1 del RA3 trabajamos fortificando un servidor Web Apache.
-[Acceso a forticación de un Servidor Web](./RA3/RA3_1)
+ [Acceso a forticación de un Servidor Web](./RA3/RA3_1)
 
 ```
 ## Arbol de trabajo
