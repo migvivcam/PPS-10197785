@@ -1,0 +1,23 @@
+FROM ubuntu:20.04
+
+# Configura el entorno en modo no interactivo y define la zona horaria
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/Madrid
+
+# Actualiza, instala Apache y tzdata; configura la zona horaria de forma no interactiva
+RUN apt-get update && \
+    apt-get install -y apache2 tzdata && \
+    ln -fs /usr/share/zoneinfo/$TZ /etc/localtime && \
+    dpkg-reconfigure -f noninteractive tzdata
+
+# Configura Apache para evitar advertencias por no tener definido ServerName
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+RUN echo "ServerTokens ProductOnly" >> /etc/apache2/apache2.conf
+RUN echo "ServerSignature Off" >> /etc/apache2/apache2.conf
+
+# Expone el puerto 80
+EXPOSE 80
+
+# Inicia Apache en primer plano
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+
