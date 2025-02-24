@@ -1,62 +1,43 @@
 # PPS-10197785
 
-Exploration of the ...
+## Repositorio para uso academico de **migvivcam**
 
-Includes the following:
-* [RA3_1](#TODO):
+## RA3 - Detección de vulnerabilidades web
+
+###Indice:
+* [RA3_1](###RA3_1):
 * [RA3_2](#TODO):
 * [RA3_3](#TODO):
 * [RA3_4](#TODO):
-* [RA3_5](./RA3/RA3_5):
-* [RA4_0](www.google.com):
+
+### RA3_1
+En la práctia 1 del RA3 trabajamos fortificando un servidor Web Apache.
+[Acceso a forticación de un Servidor Web](./RA3/RA3_1)
+
 ```
+## Arbol de trabajo
 .
-├── RA3_1
-│   ├── assets
-│   │   ├── autoindex.png
-│   │   └── head.png
-│   ├── README.md
-│   └── sources
-│       └── dockerfile
-├── RA3_2
-│   ├── assets
-│   │   ├── OWASP-LOGS.png
-│   │   ├── OWASP.png
-│   │   └── XSS.png
-│   ├── README.md
-│   └── sources
-│       ├── 000-default
-│       ├── dockerfile
-│       └── post.php
-├── RA3_3
-│   ├── assets
-│   │   └── DDOS.png
-│   ├── README.md
-│   └── sources
-│       ├── dockerfile
-│       └── evasive
-├── RA3_4
-│   ├── assets
-│   │   ├── INFO-CERT.png
-│   │   └── WEB-SSL.png
-│   ├── evasive.conf
-│   ├── README.md
-│   └── sources
-│       ├── apache.crt
-│       ├── apache.key
-│       ├── default-ssl
-│       └── dockerfile
-└── RA3_5
-    ├── assets
-    │   ├── HEAD.png
-    │   ├── LOGS.png
-    │   └── Modulos.png
-    ├── README.md
-    └── sources
-        ├── apache2.conf
-        ├── dockerfile
-        ├── post.php
-        └── ssl.conf
+└── RA3
+    ├── RA3_1
+    │   ├── RA3_1_1
+    │   │   ├── assets
+    │   │   └── sources
+    │   ├── RA3_1_2
+    │   │   ├── assets
+    │   │   └── sources
+    │   ├── RA3_1_3
+    │   │   ├── assets
+    │   │   └── sources
+    │   ├── RA3_1_4
+    │   │   ├── assets
+    │   │   └── sources
+    │   └── RA3_1_5
+    │       ├── assets
+    │       └── sources
+    ├── RA3_2
+    ├── RA3_3
+    ├── RA3_4
+    └── RA3_5
 
 ```
 # PPS-10197785
