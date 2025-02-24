@@ -7,6 +7,7 @@ Includes the following:
 * [RA3_2](#TODO):
 * [RA3_3](#TODO):
 * [RA3_4](#TODO):
+* [RA3_5](./RA3/RA3_5):
 
 ```
 .
