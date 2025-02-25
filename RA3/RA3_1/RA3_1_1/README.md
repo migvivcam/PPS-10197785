@@ -1,4 +1,4 @@
-# RA3_1
+# RA3_1_1 CSP
 
 Introduction [INTRO](URL_TASKS) :
 
@@ -7,20 +7,23 @@ Introduction [INTRO](URL_TASKS) :
 * [TASK_1](#URL_TASK_1): XXX
 * [TASK_2](#URL_TASK_2): XXX
 
-# Task_1
+# Explicación
 
 Intro...
 
 ![IMG](URL_IMG)
 
-Example code:
-
+# Ejemplos de ejecución
+## Usando dockerfile
 ```
-$ git clone https://github.com/openssh/openssh-portable
-$ patch -p1 < ~/path/to/openssh.patch
-$ autoreconf
-$ ./configure
-$ make
+curl -O https://raw.githubusercontent.com/migvivcam/PPS-10197785/refs/heads/main/RA3/RA3_1/RA3_1_1/sources/dockerfile
+docker build -t apache2-migvivcam .
+docker run -p 80:80 -p 443:443 -d --name a2-CSP apache2-migvivcam
+docker exec -it a2-CSP bash
 ```
-
-# Task_2
+## Limpiar el sistema
+```
+docker stop a2-CSP
+docker container rm a2-CSP
+docker image rm apache2-migvivcam
+```
