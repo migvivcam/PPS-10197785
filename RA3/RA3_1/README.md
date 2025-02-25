@@ -1,26 +1,47 @@
 # RA3_1
 
-Introduction [INTRO](URL_TASKS) :
+[Indice](#Indice) :
 
-# Tasks
+### Indice
 
-* [TASK_1](#URL_TASK_1): XXX
-* [TASK_2](#URL_TASK_2): XXX
+* [TASK_1](#Intro): Intro
+* [TASK_2](#Desarrollo): Desarrollo
 
-# Task_1
+## Intro
 
-Intro...
+El hardening de servidores web es el proceso de mejorar la seguridad de un servidor web, reduciendo vulnerabilidades y eliminando posibles puntos de entrada que los atacantes pueden explotar.
+Para realizar este hardening vamos a realizar las siguientes acciones en el entorno de trabajo:
+* Mantener Apache actualizado
+* Desactivar modulos innecesarios
+* Deshabilitar la visualización del servidor
+* Usar HTTPS
+* Limitación de metodos HTTP
+* Protección contra ataques de inyección
+* Implementar autenticación básica
+* Habilitar y configurar correctamente los registros
+* Usar un firewall
+* Configurar Timeout
+* Implementar limites de uso por IP
 
-![IMG](URL_IMG)
+## Desarrollo
+Estas acciones se ejecutan en los siguientes puntos:
 
-Example code:
+### RA3_1_1 CSP
+En este primer apartado se crea y configura la imagen base con la que se trabajarán los siguientes puntos y se establece una Política de Seguridad de contenido.
+[Acceso a RA3_1_1](./RA3_1_1)
 
-```
-$ git clone https://github.com/openssh/openssh-portable
-$ patch -p1 < ~/path/to/openssh.patch
-$ autoreconf
-$ ./configure
-$ make
-```
+### RA3_1_2 WAF y OWASP
+En este segundo apartado se instala y configura el modulo modsecurity2 para establecer un Firewall y reglas OWASP usando la imagen creada anteriormente.
+[Acceso a RA3_1_2](./RA3_1_2)
 
-# Task_2
+### RA3_1_3 DDOS
+En este tercer apartado se implementa el modulo evasive para prevenir ataques de DDOS y limites de uso por IP.
+[Acceso a RA3_1_3](./RA3_1_3)
+
+### RA3_1_4 SSL
+En este apartado se configura Apache para utilizar certificados y HTTPS.
+[Acceso a RA3_1_4](./RA3_1_4)
+
+### RA3_1_5 Hardening adicional
+En este ultimo apartado se realizan configuraciones adicionales para la fortificación de Apache.
+[Acceso a RA3_1_5](./RA3_1_5)
