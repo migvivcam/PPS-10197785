@@ -1,16 +1,24 @@
 FROM migvivcam/apache2:pr3
 
-# Configura el entorno en modo no interactivo y define la zona horaria
-
-# Actualiza, instala Apache y tzdata; configura la zona horaria de forma no interactiva
+# Se crea la carpeta para almacenar los certificados del servidor
 RUN mkdir /etc/apache2/ssl
+
+# Se copian el certificado y la clave privada al direcotiro de certificados del servidor
 COPY apache.* /etc/apache2/ssl
+
+# Se introduce la página web SSL configurada en el servidor
 COPY ./default-ssl /etc/apache2/sites-available/default-ssl.conf
+
+# Se habilita el modulo ssl
 RUN a2enmod ssl
+
+# Se habilita el sitio Web seguro
 RUN a2ensite default-ssl.conf
-# Configura Apache para evitar advertencias por no tener definido ServerName
+
+# Se añade el nombre del certificado al archivo hosts
 #RUN sudo echo "127.0.0.1 www.mvivas.com" >> /etc/hosts
-# Expone el puerto 80
+
+# Expone el puerto 80 y 443
 EXPOSE 80 443
 
 # Inicia Apache en primer plano

@@ -1,12 +1,11 @@
 FROM migvivcam/apache2:pr2
 
-# Configura el entorno en modo no interactivo y define la zona horaria
-
-# Actualiza, instala Apache y tzdata; configura la zona horaria de forma no interactiva
+# Actualiza e instala mod-evasive
 RUN apt-get update && \
     apt-get install -y libapache2-mod-evasive
+
+# Se copia la configuración de mod-evasive para que este en producción
 COPY ./evasive /etc/apache2/mods-available/evasive.conf
-# Configura Apache para evitar advertencias por no tener definido ServerName
 
 # Expone el puerto 80
 EXPOSE 80

@@ -12,7 +12,11 @@ RUN apt-get update && \
 
 # Configura Apache para evitar advertencias por no tener definido ServerName
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
+# Configura Apache para que solo puedan consultar la versión los módulos de apache2
 RUN echo "ServerTokens ProductOnly" >> /etc/apache2/apache2.conf
+
+# Configura Apache para que no muestre la firma de la version
 RUN echo "ServerSignature Off" >> /etc/apache2/apache2.conf
 
 # Expone el puerto 80

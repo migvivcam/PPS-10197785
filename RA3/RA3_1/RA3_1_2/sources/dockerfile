@@ -1,17 +1,17 @@
 FROM migvivcam/apache2:pr1
 
-# Configura el entorno en modo no interactivo y define la zona horaria
-ENV DEBIAN_FRONTEND=noninteractive
-
-# Actualiza, instala Apache y tzdata; configura la zona horaria de forma no interactiva
+# Actualiza e instala mod-security2
 RUN apt-get update && \
     apt-get install -y libapache2-mod-security2
+
+# Se copia la configuración recomendada por mod-security2 para que este en producción
 RUN cp /etc/modsecurity/modsecurity.conf-recommended /etc/modsecurity/modsecurity.conf
 
-## Configura Apache para evitar advertencias por no tener definido ServerName
+# Copiamos la página por defecto del servidor con la configuración de mod-security2
 COPY ./000-default /etc/apache2/sites-available/000-default.conf
+
+# Se introduce la página vulnerable para hacer pruebas en el servidor
 COPY ./post.php /var/www/html/post.php
-##
 
 # Expone el puerto 80
 EXPOSE 80

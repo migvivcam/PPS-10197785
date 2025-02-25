@@ -1,16 +1,22 @@
 FROM migvivcam/apache2:pr4
 
-# Configura el entorno en modo no interactivo y define la zona horaria
+# Copiamos la configuración de apache2 con los parametros seguros
 COPY ./apache2.conf /etc/apache2/apache2.conf
+
+# Copiamos la configuración modificada del modulo SSL
 COPY ./ssl.conf /etc/apache2/mods-available/ssl.conf
+
+# Copiamos la página PHP para realizar pruebas en el servidor
 COPY ./post.php /var/www/html/post.php
-# Actualiza, instala Apache y tzdata; configura la zona horaria de forma no interactiva
+
+# Se habilitan modulos requeridos para configurar la seguridad de apache2
 RUN a2enmod headers
 RUN a2enmod rewrite
+
+# Se deshabilitan modulos reduntantes o que muestran información extra
 RUN a2dismod dav info
-# Configura Apache para evitar advertencias por no tener definido ServerName
-#RUN sudo echo "127.0.0.1 www.mvivas.com" >> /etc/hosts
-# Expone el puerto 80
+
+# Expone el puerto 80 y 443
 EXPOSE 80 443
 
 # Inicia Apache en primer plano
