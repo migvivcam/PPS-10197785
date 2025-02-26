@@ -15,8 +15,8 @@ En el dockerfile se activa el modulo y se incorpora el archivo de configuración
 
 ## Resultados
 
-Tras la creación de la imagen tenemos una version de apache que cuenta con una protección frente ataques DDOS ademas de CSP y reglas OWASP.
-Para probar el funcionamiento del modulo se usa ab lanzando 100 accesos a la página web.
+Tras la creación de la imagen tenemos una version de apache que cuenta con una protección frente ataques DDOS ademas de CSP y reglas OWASP.  
+Para probar el funcionamiento del modulo se usa ab lanzando 100 accesos a la página web.  
 ![IMG](./assets/DDOS.png)  
   
 #### Advertencia

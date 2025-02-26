@@ -15,11 +15,11 @@ Por este motivo, en el dockerfile habilitamos las reglas por defecto, y las aciv
 [Dockerfile](./sources/dockerfile)  
 
 ## Resultados
-Tras crear la imagen con dockerfile tenemos una instalación de apache con las reglas basicas de OWASP, y al hacer un intento de inyección de codigo recibimos una advertencia.
+Tras crear la imagen con dockerfile tenemos una instalación de apache con las reglas basicas de OWASP, y al hacer un intento de inyección de codigo recibimos una advertencia.  
 ![IMG](./assets/OWASP.png)  
-Este intento de acceso queda registrado en los logs del sistema.
+Este intento de acceso queda registrado en los logs del sistema.  
 ![IMG](./assets/OWASP-LOGS.png)  
-Y por ultimo si intentamos hacer XSS en una página de ejemplo podemos ver que el servidor rechaza la conexión.
+Y por ultimo si intentamos hacer XSS en una página de ejemplo podemos ver que el servidor rechaza la conexión.  
 ![IMG](./assets/XSS.png)  
   
 #### Advertencia

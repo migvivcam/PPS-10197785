@@ -14,9 +14,9 @@ Esto se consigue realizando una instalación actualizada de Apache2 y añadiendo
 [Dockerfile](./sources/dockerfile)  
 
 ## Resultados
-Tras crear la imagen tenemos una versión de Apache2 que no permite el indexado automatico del contenido de los directorios.
+Tras crear la imagen tenemos una versión de Apache2 que no permite el indexado automatico del contenido de los directorios.  
 ![IMG](./assets/autoindex.png)  
-Y que no expone información adicional en las cabeceras de la Web.
+Y que no expone información adicional en las cabeceras de la Web.  
 ![IMG](./assets/head.png)  
   
 #### Advertencia

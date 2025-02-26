@@ -16,11 +16,11 @@ Además se habilitan los modulos rewrite y headers para deshabilitar el protocol
 
 ## Resultados
 
-Para comprobar que estos cambios están en producción podemos hacer un dump de los modulos de apache.
+Para comprobar que estos cambios están en producción podemos hacer un dump de los modulos de apache.  
 ![IMG](./assets/Modulos.png)  
-Podemos listar los logs de apache2.
+Podemos listar los logs de apache2.  
 ![IMG](./assets/LOGS.png)  
-Y comprobar las cabeceras de la página web.
+Y comprobar las cabeceras de la página web.  
 ![IMG](./assets/HEAD.png)  
   
 #### Advertencia
