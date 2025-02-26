@@ -4,7 +4,7 @@
 
 ### Indice
 
-* [TASK_1](#RA3_1_1 CSP): Intro
+* [TASK_1](#RA3_1_1): Intro
 * [TASK_2](#Desarrollo): Desarrollo
 
 ## Intro
