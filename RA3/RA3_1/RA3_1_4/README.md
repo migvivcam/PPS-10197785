@@ -1,26 +1,41 @@
-# RA3_1
+# RA3_1_3 SSL
 
-Introduction [INTRO](URL_TASKS) :
+### Indice
 
-# Tasks
+* [Explicación](#Explicación): Explicación
+* [Desarrollo](#Ejemplos-de-ejecución): Desarrollo
+* [Navegación](#Navegación): Navegación
+  
+# Explicación
 
-* [TASK_1](#URL_TASK_1): XXX
-* [TASK_2](#URL_TASK_2): XXX
+Para poder usar certificados en la página web se usa el modulo SSL y se habilita el sitio Web default-SSL, en el cual configuramos que use las reglas de OWASP para evitas XSS.
+Los certificados se crean en la máquina anfitrion y se copian en la carpeta sources junto al dockerfile, el cual los incorporará a la imagen de docker automaticamente.  
+[Recursos](./sources)  
+[Dockerfile](./sources/dockerfile)  
 
-# Task_1
+## Resultados
 
-Intro...
+Una vez se crea la imagen o se descarga de dockerhub, tenemos una instalación de apache que usa certificados autofirmados SSL
+![IMG](./assets/WEB-SSL.png)
+Y si accedemos a la información de los certificados para ver su información podemos ver los detalles.
+![IMG](./assets/INFO-CERT.png)
+  
+#### Advertencia
+Algunas de las configuraciones requeridas en la práctica se encuentran configuradas por defecto en las nuevas versiones de apache2.
 
-![IMG](URL_IMG)
+# Ejemplos de ejecución
 
-Example code:
-
+## Usando docker run
 ```
-$ git clone https://github.com/openssh/openssh-portable
-$ patch -p1 < ~/path/to/openssh.patch
-$ autoreconf
-$ ./configure
-$ make
+docker run -p 80:80 -p 443:443 -d --name a2-SSL migvivcam/apache2:pr4
+docker exec -it a2-SSL bash
+```
+## Limpiar el sistema
+```
+docker stop a2-SSL
+docker container rm a2-SSL
+docker image rm migvivcam/apache2:pr4
 ```
 
-# Task_2
+#### Navegación
+[<- Atrás](../)  -  [Arriba](#RA3_1_4-SSL)  -  [Siguiente ->](../RA3_1_5)

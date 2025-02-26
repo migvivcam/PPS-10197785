@@ -9,7 +9,9 @@
 # Explicación
 
 En este primer punto tenemos como objetivo realizar una configuración de apache segura y establecer una politica segura del contenido.
-Esto se consigue realizando una instalación actualizada de Apache2 y añadiendo las modificaciones necesarias al archivo de configuración.
+Esto se consigue realizando una instalación actualizada de Apache2 y añadiendo las modificaciones necesarias al archivo de configuración.  
+[Recursos](./sources)  
+[Dockerfile](./sources/dockerfile)  
 
 ## Resultados
 Tras crear la imagen tenemos una versión de Apache2 que no permite el indexado automatico del contenido de los directorios.
@@ -37,4 +39,4 @@ docker image rm apache2-migvivcam
 ```
 
 #### Navegación
-[Atrás](../)  -  [Arriba](#RA3_1_1-CSP)  -  [Siguiente](../RA3_1_2)
+[<- Atrás](../)  -  [Arriba](#RA3_1_1-CSP)  -  [Siguiente ->](../RA3_1_2)
