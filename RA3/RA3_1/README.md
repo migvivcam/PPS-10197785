@@ -1,12 +1,11 @@
 # RA3_1
-
-[Indice](#Indice) :
-
+  
 ### Indice
 
-* [TASK_1](#RA3_1_1): Intro
-* [TASK_2](#Desarrollo): Desarrollo
-
+* [Intro](#Intro): Intro
+* [Desarrollo](#Desarrollo): Desarrollo
+* [Navegación](#Navegación): Navegación
+  
 ## Intro
 
 El hardening de servidores web es el proceso de mejorar la seguridad de un servidor web, reduciendo vulnerabilidades y eliminando posibles puntos de entrada que los atacantes pueden explotar.
@@ -28,20 +27,18 @@ Estas acciones se ejecutan en los siguientes puntos:
 
 ### [RA3_1_1 CSP](./RA3_1_1)
 En este primer apartado se crea y configura la imagen base con la que se trabajarán los siguientes puntos y se establece una Política de Seguridad de contenido.  
-* [Acceso a RA3_1_1](./RA3_1_1)
-
-### RA3_1_2 WAF y OWASP
+  
+### [RA3_1_2 WAF y OWASP](./RA3_1_2)
 En este segundo apartado se instala y configura el modulo modsecurity2 para establecer un Firewall y reglas OWASP usando la imagen creada anteriormente.
-* [Acceso a RA3_1_2](./RA3_1_2)
-
-### RA3_1_3 DDOS
+  
+### [RA3_1_3 DDOS](./RA3_1_3)
 En este tercer apartado se implementa el modulo evasive para prevenir ataques de DDOS y limites de uso por IP.
-* [Acceso a RA3_1_3](./RA3_1_3)
-
-### RA3_1_4 SSL
+  
+### [RA3_1_4 SSL](./RA3_1_4)
 En este apartado se configura Apache para utilizar certificados y HTTPS.
-* [Acceso a RA3_1_4](./RA3_1_4)
-
-### RA3_1_5 Hardening adicional
+  
+### [RA3_1_5 Hardening adicional](./RA3_1_5)
 En este ultimo apartado se realizan configuraciones adicionales para la fortificación de Apache.
-* [Acceso a RA3_1_5](./RA3_1_5)
+  
+#### Navegación
+[Atrás](../)  -  [Arriba](#RA3_1)  -  [Siguiente](./RA3_1_1)
