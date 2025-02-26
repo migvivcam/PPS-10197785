@@ -9,7 +9,7 @@
 * [RA3_4](#TODO):
 
 
-### [RA3_1]](./RA3/RA3_1)
+### [RA3_1](./RA3/RA3_1)
 En la práctia 1 del RA3 trabajamos fortificando un servidor Web Apache.  
 
 ```
