@@ -13,9 +13,9 @@ Esto se consigue realizando una instalación actualizada de Apache2 y añadiendo
 
 ## Resultados
 Tras crear la imagen tenemos una versión de Apache2 que no permite el indexado automatico del contenido de los directorios.
-![IMG](./assets/autoindex.png)
+![IMG](./assets/autoindex.png)  
 Y que no expone información adicional en las cabeceras de la Web.
-![IMG](./assets/heaad.png)
+![IMG](./assets/head.png)  
   
 #### Advertencia
 Algunas de las configuraciones requeridas en la práctica se encuentran configuradas por defecto en las nuevas versiones de apache2.
