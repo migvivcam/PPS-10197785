@@ -16,9 +16,9 @@ Los certificados se crean en la máquina anfitrion y se copian en la carpeta sou
 ## Resultados
 
 Una vez se crea la imagen o se descarga de dockerhub, tenemos una instalación de apache que usa certificados autofirmados SSL
-![IMG](./assets/WEB-SSL.png)
+![IMG](./assets/WEB-SSL.png)  
 Y si accedemos a la información de los certificados para ver su información podemos ver los detalles.
-![IMG](./assets/INFO-CERT.png)
+![IMG](./assets/INFO-CERT.png)  
   
 #### Advertencia
 Algunas de las configuraciones requeridas en la práctica se encuentran configuradas por defecto en las nuevas versiones de apache2.
