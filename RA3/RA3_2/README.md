@@ -1,26 +1,4 @@
-# RA3_1
+# RA3_2
 
-Introduction [INTRO](URL_TASKS) :
-
-# Tasks
-
-* [TASK_1](#URL_TASK_1): XXX
-* [TASK_2](#URL_TASK_2): XXX
-
-# Task_1
-
-Intro...
-
-![IMG](URL_IMG)
-
-Example code:
-
-```
-$ git clone https://github.com/openssh/openssh-portable
-$ patch -p1 < ~/path/to/openssh.patch
-$ autoreconf
-$ ./configure
-$ make
-```
-
-# Task_2
+DVWA es una apliación Web deliberadamente vulnerable diseñada para probar y mejorar habilidades en ciberseguridad.
+En este proyecto se instala DVWA en un entorno controlado (Docker) y se realizan pribas de penetración en los diferentes niveles de seguridad ofrecidos por la aplicación.
