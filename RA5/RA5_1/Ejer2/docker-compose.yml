@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  calculadora:
+    build: .
+    command: python calculadora.py 6 7
+
+  test:
+    build: .
+    command: python -m unittest test_calculator.py

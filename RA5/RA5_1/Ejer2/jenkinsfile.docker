@@ -1,0 +1,45 @@
+pipeline {
+agent {
+        dockerContainer { image 'python:3.10' }
+    }
+
+    environment {
+        IMAGE_NAME = 'calc-image'
+        CONTAINER_NAME = 'calc-container'
+    }
+
+    stages {
+        stage('Construir imagen Docker') {
+            steps {
+                sh 'docker build -t $IMAGE_NAME .'
+            }
+        }
+
+        stage('Ejecutar contenedor') {
+            steps {
+                sh 'docker run --rm --name $CONTAINER_NAME $IMAGE_NAME'
+            }
+        }
+
+        stage('Ejecutar pruebas dentro del contenedor') {
+            steps {
+                sh 'docker run --rm $IMAGE_NAME python -m unittest test_calculator.py'
+            }
+        }
+
+        stage('Ejecutar docker-compose') {
+            steps {
+                sh 'docker-compose up --build --abort-on-container-exit'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completado exitosamente'
+        }
+        failure {
+            echo 'Falló alguna etapa del pipeline'
+        }
+    }
+}
