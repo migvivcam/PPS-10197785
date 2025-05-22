@@ -61,6 +61,7 @@ Los pasos a seguir son:
 El directorio Ej-2 contiene los archivos necesarios para configuar la VM usando Ansible.
 
 1. **Explicación de hosts.ini**
+
 Un archivo de inventario `hosts.ini` con el siguiente contenido:
 
 ```ini
