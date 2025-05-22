@@ -13,6 +13,3 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt.gz 192.168.1.206 http-get-for
 
 ![img](images/Medium.png)
 
-### Nivel Alto
-
-![img](images/Alto.png)
