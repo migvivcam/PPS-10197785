@@ -19,6 +19,8 @@ Instalar, configurar y validar un clúster **K3s** en modo *single-node*, desple
 curl -sfL https://get.k3s.io | sh -
 ```
 
+![img](./imgs/00-Instalar.png)
+
 Verificar el estado del servicio:
 ```bash
 sudo systemctl status k3s
@@ -65,6 +67,8 @@ Aplicar el despliegue:
 kubectl apply -f nginx-deployment.yaml
 ```
 
+![img](./imgs/01-Despliegue.png)
+
 Verificar que los pods estén corriendo:
 ```bash
 kubectl get pods
@@ -83,3 +87,5 @@ Ejecutar:
 ```bash
 k9s
 ```
+
+![img](./imgs/02-k9s.png)

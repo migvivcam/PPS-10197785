@@ -78,6 +78,8 @@ Verifica:
 sudo k3s kubectl get nodes
 ```
 
+![img](./imgs/00-cluster.png)
+
 ### 3. Alias para kubectl (opcional)
 
 ```bash
@@ -118,11 +120,15 @@ Aplicar el manifiesto:
 kubectl apply -f nginx-deployment.yaml
 ```
 
+![img](./imgs/01-nginx.png)
+
 Verificar:
 
 ```bash
 kubectl get pods -o wide
 ```
+
+![img](./imgs/02-pods.png)
 
 ---
 
@@ -142,25 +148,4 @@ Ejecutar:
 k9s
 ```
 
-Desde K9s:
-
-* Navega a los recursos `pods`, `nodes` y `deployments`.
-* Observa el estado en tiempo real.
-
----
-
-## Validación
-
-* Todos los nodos deben aparecer como `Ready`.
-* El despliegue nginx debe tener 2 pods corriendo.
-* K9s debe reflejar correctamente el estado del clúster.
-
----
-
-## Fin de la actividad
-
-Actividad completada correctamente si:
-
-* Se forma un clúster HA funcional con embedded etcd.
-* nginx se despliega correctamente con 2 réplicas.
-* K9s permite gestionar y monitorear el clúster sin errores.
+![img](./imgs/03-k9s.png)

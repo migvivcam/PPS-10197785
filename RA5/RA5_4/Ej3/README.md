@@ -409,28 +409,10 @@ kubectl logs -f deployment/traefik -n myapp
 kubectl get ingress -n myapp
 ```
 
+![img](./imgs/00-deploy.png)
+
+![img](./imgs/01-Logs.png)
+
 ### 4. Acceder a la aplicación
 - **Aplicación web**: http://localhost:30400
 - **Dashboard de Traefik**: http://localhost:30800
-
-## Principales Diferencias y Consideraciones
-
-### Cambios Arquitectónicos:
-1. **Networking**: En lugar de enlaces automáticos de Docker, usamos Services de Kubernetes
-2. **Storage**: Los volúmenes se manejan con PV/PVC en lugar de bind mounts
-3. **Service Discovery**: Las aplicaciones se comunican usando nombres de servicios DNS
-4. **Load Balancing**: Traefik usa Ingress controllers en lugar de labels de Docker
-5. **Scaling**: Fácil escalado horizontal con `replicas`
-
-### Beneficios de K3s:
-- **Alta disponibilidad** con múltiples réplicas
-- **Health checks** automáticos con liveness/readiness probes
-- **Resource limits** para mejor gestión de recursos
-- **Rolling updates** sin downtime
-- **Service mesh** capabilities con Traefik
-
-### Configuración adicional recomendada:
-1. **SSL/TLS**: Agregar certificados con cert-manager
-2. **Monitoring**: Integrar Prometheus y Grafana
-3. **Secrets**: Usar Kubernetes Secrets para datos sensibles
-4. **ConfigMaps**: Para configuraciones de aplicación
